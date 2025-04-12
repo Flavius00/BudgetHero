@@ -11,6 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (Schema::hasTable('user__challenges')) {
+            return;
+        }
         Schema::create('user__challenges', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('user')->onDelete('cascade');
