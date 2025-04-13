@@ -18,7 +18,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamp('transaction_date')->nullable();
-            $table->foreignId('store_id')->constrained('stores')->onDelete('cascade');
+            // $table->foreignId('store_id')->constrained('stores')->onDelete('cascade');
+            $table->foreignId('store_id')->constrained('stores');
+            // $table->foreign('store_id')->references('id')->on('stores');
             $table->float('amount')->nullable();
             $table->boolean('is_income')->default(false);
             $table->timestamps();
