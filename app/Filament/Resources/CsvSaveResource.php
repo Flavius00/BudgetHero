@@ -60,8 +60,8 @@ class CsvSaveResource extends Resource
                 TextColumn::make('store.name')->label('Store Name'),
                 TextColumn::make('amount'),
                 TextColumn::make('is_income'),
-                TextColumn::make('created_at')->dateTime(),
-                TextColumn::make('updated_at')->dateTime(),
+                // TextColumn::make('created_at')->dateTime(),
+                // TextColumn::make('updated_at')->dateTime(),
                 // TextColumn::make('category')->label('Category'),
                 TextColumn::make('total_spent')->label('Estimated Spendings This Month')
                     ->getStateUsing(function($record) use ($spendingsByCategory) {

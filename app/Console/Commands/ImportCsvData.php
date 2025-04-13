@@ -16,7 +16,7 @@ class ImportCsvData extends Command
     {
         DB::transaction(function () {
             // ======= Import Merchants =======
-            $merchantPath = storage_path('app/merchants.csv');
+            $merchantPath = storage_path('app/private/imports/merchants.csv');
 
             if (!file_exists($merchantPath)) {
                 $this->error("Merchant CSV not found at $merchantPath");
