@@ -16,7 +16,7 @@ return new class extends Migration
         }
         Schema::create('csv_saves', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamp('transaction_date')->nullable();
             $table->foreignId('store_id')->constrained('stores');
             $table->float('amount')->nullable();
