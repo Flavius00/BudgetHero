@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Challenge extends Model
 {
@@ -21,6 +22,6 @@ class Challenge extends Model
 
     public function getBadgeUrlAttribute(): ?string
     {
-        return $this->badge ? asset('storage/' . $this->badge) : null;
+        return $this->badge ? Storage::disk('public')->url($this->badge) : null;
     }
 }
