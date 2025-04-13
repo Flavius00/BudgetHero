@@ -1,18 +1,20 @@
 <?php
-
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CsvSaveResource\Pages;
 use App\Filament\Resources\CsvSaveResource\RelationManagers;
 use App\Models\CsvSave;
+use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Models\Store;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class CsvSaveResource extends Resource
 {
@@ -23,34 +25,66 @@ class CsvSaveResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                //
-            ]);
+            ->schema([/* Form schema here */]);
     }
 
     public static function table(Table $table): Table
-{
-    return $table
-        ->columns([
-            Tables\Columns\TextColumn::make('id'),
-            Tables\Columns\TextColumn::make('transaction_date')->dateTime(),
-            Tables\Columns\TextColumn::make('store_id'),
-            Tables\Columns\TextColumn::make('amount'),
-            Tables\Columns\TextColumn::make('is_income'),
-            Tables\Columns\TextColumn::make('created_at')->dateTime(),
-            Tables\Columns\TextColumn::make('updated_at')->dateTime(),
-        ])
-        ->filters([
-            //
-        ]);
-}
+    {
+        $currentMonth = Carbon::now()->month;
+        $currentYear = Carbon::now()->year;
+
+        $year = 2025; // Dynamically set year
+        $month = 4;   // Dynamically set month
+
+        // Retrieve spendings grouped by category for the specified year and month
+        $spendingsByCategory = CsvSave::whereYear('transaction_date', $year)
+            ->whereMonth('transaction_date', $month)
+            ->where('is_income', 0)
+            ->with('store') // Ensure related store is eager-loaded
+            ->get()
+            ->groupBy(function ($csvSave) {
+                return $csvSave->store->category; // Group by store category
+            })
+            ->map(function ($group) {
+                // Sum the total spendings per category
+                return $group->sum('amount');
+            });
+
+        return $table
+            ->columns([
+                TextColumn::make('id'),
+                TextColumn::make('transaction_date')->dateTime(),
+                TextColumn::make('store.name')->label('Store Name'),
+                TextColumn::make('amount'),
+                TextColumn::make('is_income'),
+                TextColumn::make('created_at')->dateTime(),
+                TextColumn::make('updated_at')->dateTime(),
+                TextColumn::make('category_name')->label('Category'),
+                TextColumn::make('total_spent')->label('Estimated Spendings This Month')
+                    ->getStateUsing(function($record) use ($spendingsByCategory) {
+                        // Get the total spending for the store's category
+                        $category = $record->store->category;
+                        return $spendingsByCategory->get($category, 0); // Default to 0 if category is not found
+                    }),
+            ])
+            ->filters([
+                Filter::make('date_range')
+                    ->form([
+                        Forms\Components\DatePicker::make('from')->label('Start Date'),
+                        Forms\Components\DatePicker::make('until')->label('End Date'),
+                    ])
+                    ->query(function (Builder $query, array $data) {
+                        return $query
+                            ->when($data['from'], fn ($q) => $q->whereDate('transaction_date', '>=', $data['from']))
+                            ->when($data['until'], fn ($q) => $q->whereDate('transaction_date', '<=', $data['until']));
+                    }),
+            ]);
+    }
 
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [/* Relations here */];
     }
 
     public static function getPages(): array
@@ -63,8 +97,23 @@ class CsvSaveResource extends Resource
         ];
     }
 
-    public function store()
-    {
-        return $this->belongsTo(Store::class); // or ->belongsTo(Store::class, 'store_id') if column name differs
-    }
+    public static function getCategorySpendings(int $year = null, int $month = null): array
+{
+    $year = $year ?? now()->year;
+    $month = $month ?? now()->month;
+
+    return CsvSave::whereYear('transaction_date', $year)
+        ->whereMonth('transaction_date', $month)
+        ->where('is_income', 0)
+        ->with('store')
+        ->get()
+        ->groupBy(fn($csvSave) => $csvSave->store->category)
+        ->map(fn($group) => [
+            'category' => $group->first()->store->category,
+            'total_spent' => $group->sum('amount'),
+        ])
+        ->values()
+        ->toArray();
+}
+
 }
