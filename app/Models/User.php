@@ -6,10 +6,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+<<<<<<< HEAD
 use Filament\Models\Contracts\FilamentUsers;
 use Filament\Panel;
 
 class User extends Authenticatable implements FilamentUsers
+=======
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
+
+class User extends Authenticatable implements FilamentUser
+>>>>>>> 4da3c0a0b7222ac1138263f4110dfdd407869dee
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -48,7 +55,11 @@ class User extends Authenticatable implements FilamentUsers
         ];
     }
 
+<<<<<<< HEAD
     public function canAccessPanel(Panel @panel): bool
+=======
+    public function canAccessPanel(Panel $panel): bool
+>>>>>>> 4da3c0a0b7222ac1138263f4110dfdd407869dee
     {
         return true;
     }

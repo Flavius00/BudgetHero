@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (Schema::hasTable('csv_saves')) {
+            return;
+        }
         Schema::create('csv_saves', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamp('transaction_date')->nullable();
-            $table->foreignId('store_id')->constrained('store')->onDelete('cascade');
+            $table->foreignId('store_id')->constrained('stores')->onDelete('cascade');
             $table->float('amount')->nullable();
             $table->boolean('is_income')->default(false);
             $table->timestamps();
