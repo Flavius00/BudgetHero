@@ -20,7 +20,7 @@ class CsvSaveResource extends Resource
 {
     protected static ?string $model = CsvSave::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-trending-up';
+    protected static ?string $navigationIcon = 'heroicon-o-arrow-trending-up';
     protected static ?string $navigationLabel = 'Analysis';
     protected static ?string $pluralModelLabel = 'Analysis';
     protected static ?string $modelLabel = 'Analysis';
