@@ -21,6 +21,9 @@ class CsvSaveResource extends Resource
     protected static ?string $model = CsvSave::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Analysis';
+    protected static ?string $pluralModelLabel = 'Analysis';
+    protected static ?string $modelLabel = 'Analysis';
 
     public static function form(Form $form): Form
     {
@@ -59,7 +62,7 @@ class CsvSaveResource extends Resource
                 TextColumn::make('is_income'),
                 TextColumn::make('created_at')->dateTime(),
                 TextColumn::make('updated_at')->dateTime(),
-                TextColumn::make('category_name')->label('Category'),
+                // TextColumn::make('category')->label('Category'),
                 TextColumn::make('total_spent')->label('Estimated Spendings This Month')
                     ->getStateUsing(function($record) use ($spendingsByCategory) {
                         // Get the total spending for the store's category
