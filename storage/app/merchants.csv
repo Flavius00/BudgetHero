@@ -1,0 +1,23 @@
+merchant_name,category
+Netflix,entertainment
+Spotify,entertainment
+HBO Max,entertainment
+YouTube Premium,entertainment
+Walmart,groceries
+Kroger,groceries
+Whole Foods,groceries
+Aldi,groceries
+McDonald's,restaurants
+Starbucks,restaurants
+Chipotle,restaurants
+Subway,restaurants
+Uber,transport
+Lyft,transport
+Shell,transport
+ExxonMobil,transport
+Amazon,shopping
+eBay,shopping
+Target,shopping
+Best Buy,shopping
+My employee, income
+A friend, income

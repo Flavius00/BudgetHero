@@ -1,0 +1,105 @@
+transaction_date,store_name,amount,type
+2025-04-02,Shell,43.63,outcome
+2025-04-09,Shell,173.13,outcome
+2025-03-26,Whole Foods,176.61,outcome
+2025-03-19,Netflix,22.66,outcome
+2025-03-07,Netflix,136.62,outcome
+2025-02-15,My employee,3615,00,income
+2025-04-15,My employee,3615,00,income
+2025-03-15,My employee,3615,00,income
+2025-03-15,McDonald's,117.55,outcome
+2025-02-19,Best Buy,16.23,outcome
+2025-03-11,Uber,30.21,outcome
+2025-04-09,Kroger,88.27,outcome
+2025-03-31,Target,168.68,outcome
+2025-03-24,Whole Foods,19.34,outcome
+2025-02-14,Lyft,180.01,outcome
+2025-02-23,Lyft,143.91,outcome
+2025-04-01,McDonald's,14.12,outcome
+2025-03-11,Whole Foods,57.91,outcome
+2025-02-18,Walmart,179.42,outcome
+2025-02-14,Target,36.53,outcome
+2025-04-11,Uber,10.8,outcome
+2025-03-21,Best Buy,74.99,outcome
+2025-03-26,Lyft,117.12,outcome
+2025-03-21,McDonald's,177.38,outcome
+2025-02-17,Target,183.19,outcome
+2025-04-07,Netflix,56.99,outcome
+2025-03-05,Uber,167.96,outcome
+2025-04-01,ExxonMobil,117.5,outcome
+2025-04-03,Kroger,17.49,outcome
+2025-02-15,Kroger,90.2,outcome
+2025-03-23,Walmart,42.66,outcome
+2025-03-09,Target,170.13,outcome
+2025-03-26,Kroger,50.87,outcome
+2025-02-14,Starbucks,93.65,outcome
+2025-03-06,YouTube Premium,159.79,outcome
+2025-03-21,Chipotle,104.01,outcome
+2025-03-07,Shell,150.72,outcome
+2025-02-12,Best Buy,132.53,outcome
+2025-04-13,ExxonMobil,117.13,outcome
+2025-02-26,Kroger,132.68,outcome
+2025-04-06,YouTube Premium,79.15,outcome
+2025-03-13,eBay,110.62,outcome
+2025-02-21,HBO Max,126.05,outcome
+2025-03-06,Netflix,24.46,outcome
+2025-02-14,Walmart,171.99,outcome
+2025-03-19,YouTube Premium,149.52,outcome
+2025-03-30,YouTube Premium,73.88,outcome
+2025-04-06,HBO Max,122.18,outcome
+2025-02-28,eBay,169.89,outcome
+2025-03-14,Lyft,167.92,outcome
+2025-02-20,Netflix,130.23,outcome
+2025-02-17,eBay,40.88,outcome
+2025-02-13,Best Buy,98.14,outcome
+2025-03-13,Uber,151.77,outcome
+2025-03-09,Target,17.1,outcome
+2025-03-19,Aldi,78.23,outcome
+2025-04-12,YouTube Premium,117.16,outcome
+2025-04-09,Target,127.53,outcome
+2025-03-19,Starbucks,37.5,outcome
+2025-03-13,ExxonMobil,121.89,outcome
+2025-04-01,Amazon,83.12,outcome
+2025-03-09,Kroger,95.7,outcome
+2025-03-29,YouTube Premium,7.26,outcome
+2025-03-12,Subway,67.09,outcome
+2025-02-21,Kroger,144.23,outcome
+2025-04-08,Target,66.66,outcome
+2025-02-20,Uber,90.54,outcome
+2025-03-21,Walmart,41.67,outcome
+2025-03-03,Amazon,83.58,outcome
+2025-04-07,Spotify,174.63,outcome
+2025-02-20,Best Buy,42.79,outcome
+2025-03-23,Kroger,189.54,outcome
+2025-03-27,Amazon,85.66,outcome
+2025-04-09,Subway,183.3,outcome
+2025-03-07,Walmart,63.35,outcome
+2025-03-06,Lyft,171.51,outcome
+2025-03-06,A friend,826.56,income
+2025-04-11,Netflix,161.74,outcome
+2025-03-13,Whole Foods,180.86,outcome
+2025-03-01,Uber,34.78,outcome
+2025-03-27,HBO Max,61.6,outcome
+2025-03-09,Kroger,124.31,outcome
+2025-03-13,Target,182.99,outcome
+2025-04-02,Best Buy,70.4,outcome
+2025-02-20,Kroger,163.47,outcome
+2025-04-07,Whole Foods,45.17,outcome
+2025-03-22,Whole Foods,90.76,outcome
+2025-02-21,Netflix,132.68,outcome
+2025-03-14,Spotify,64.36,outcome
+2025-04-02,Aldi,105.99,outcome
+2025-03-14,Target,69.33,outcome
+2025-03-14,Whole Foods,164.54,outcome
+2025-02-28,Kroger,21.17,outcome
+2025-04-10,YouTube Premium,148.09,outcome
+2025-03-19,eBay,187.72,outcome
+2025-03-25,Kroger,143.92,outcome
+2025-03-07,Starbucks,102.43,outcome
+2025-03-23,Walmart,198.29,outcome
+2025-02-14,Spotify,90.5,outcome
+2025-04-07,Chipotle,34.55,outcome
+2025-03-24,Netflix,141.37,outcome
+2025-04-10,Whole Foods,37.9,outcome
+2025-04-08,Best Buy,167.03,outcome
+2025-04-03,Lyft,72.83,outcome
