@@ -1,0 +1,55 @@
+{
+    "questions": [
+      {
+        "question": "Ce este un buget personal?",
+        "options": {
+          "a": "O listă de dorințe de cumpărături",
+          "b": "Un document care estimează veniturile și cheltuielile",
+          "c": "Un plan de afaceri",
+          "d": "Un cont bancar de economii"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Care dintre următoarele este o cheltuială fixă?",
+        "options": {
+          "a": "Factura de electricitate",
+          "b": "Abonamentul la internet",
+          "c": "Cheltuielile pentru mâncare",
+          "d": "Cumpărături impulsive"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Ce înseamnă diversificarea investițiilor?",
+        "options": {
+          "a": "Investirea întregii sume într-o singură companie",
+          "b": "Păstrarea banilor doar în contul curent",
+          "c": "Plasarea banilor în mai multe tipuri de active",
+          "d": "Așteptarea scăderii pieței pentru a investi"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question": "Ce este un credit ipotecar?",
+        "options": {
+          "a": "Un împrumut pentru achiziționarea unei locuințe",
+          "b": "O formă de leasing auto",
+          "c": "O taxă lunară pentru întreținere",
+          "d": "Un plan de economii"
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question": "Ce reprezintă scorul de credit?",
+        "options": {
+          "a": "Numărul de carduri de credit deținute",
+          "b": "Un indicator al istoricului tău de credit",
+          "c": "Suma totală a datoriei",
+          "d": "Venitul lunar"
+        },
+        "correct_answer": "b"
+      }
+    ]
+  }
+  

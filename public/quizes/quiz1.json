@@ -1,0 +1,55 @@
+{
+    "questions": [
+      {
+        "question": "Care este un mod eficient de a economisi bani lunar?",
+        "options": {
+          "a": "Să cumperi în fiecare zi cafea din oraș",
+          "b": "Să eviți bugetarea",
+          "c": "Să economisești cel puțin 20% din venit",
+          "d": "Să investești tot salariul în criptomonede"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question": "Ce este un fond de urgență?",
+        "options": {
+          "a": "Bani puși deoparte pentru vacanță",
+          "b": "Bani rezervați pentru cheltuieli neprevăzute",
+          "c": "Un împrumut bancar rapid",
+          "d": "Investiție în acțiuni riscante"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Ce reprezintă dobânda compusă?",
+        "options": {
+          "a": "Dobânda aplicată doar la suma inițială",
+          "b": "Dobânda calculată pe baza cheltuielilor lunare",
+          "c": "Dobânda câștigată din dobânda acumulată anterior",
+          "d": "Taxă aplicată la fiecare tranzacție"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question": "Ce este un buget personal?",
+        "options": {
+          "a": "Un plan detaliat al veniturilor și cheltuielilor",
+          "b": "Un cont bancar pentru economii",
+          "c": "O listă cu produse de cumpărat",
+          "d": "Un plan de investiții în bursă"
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question": "Ce înseamnă diversificarea investițiilor?",
+        "options": {
+          "a": "Investirea tuturor banilor într-o singură companie",
+          "b": "Cheltuirea banilor în mod variat",
+          "c": "Împărțirea investițiilor în mai multe tipuri de active",
+          "d": "Evitarea completă a investițiilor"
+        },
+        "correct_answer": "c"
+      }
+    ]
+  }
+  
