@@ -73,7 +73,7 @@ class ImportCsvData extends Command
                 ];
 
                 $this->info("Saving transaction: " . json_encode($data));
-                $transaction = csv_save::create($data);
+                $transaction = CsvSave::create($data);
                 $this->info("✅ Saved transaction ID: " . $transaction->id);
                 $imported++;
             }
